@@ -1,0 +1,581 @@
+{
+  "id": "stt-roof-chain",
+  "title": "STT / 屋根から2連続スピン",
+  "description": "プレイヤー作成盤面。Sで準備し、Tで2回の特殊スピン消去。",
+  "difficulty": 3,
+  "tags": ["local"],
+  "rows": ["...X......", "XXXXX.....", "XXX...XXXX", "XXXX.XXXXX"],
+  "hold": null,
+  "queue": ["S", "T", "T"],
+  "goal": {
+    "spinFromPiece": 2,
+    "maxPieces": 3,
+    "clearEvents": [
+      {
+        "kind": "spin"
+      },
+      {
+        "kind": "spin"
+      }
+    ],
+    "milestones": [
+      {
+        "type": "boardPattern",
+        "afterPieces": 1,
+        "beforeClear": 0,
+        "requiredFilled": [
+          {
+            "x": 6,
+            "y": 36
+          },
+          {
+            "x": 7,
+            "y": 36
+          },
+          {
+            "x": 5,
+            "y": 37
+          },
+          {
+            "x": 6,
+            "y": 37
+          }
+        ],
+        "requiredEmpty": [
+          {
+            "x": 8,
+            "y": 36
+          },
+          {
+            "x": 7,
+            "y": 37
+          },
+          {
+            "x": 8,
+            "y": 37
+          },
+          {
+            "x": 9,
+            "y": 37
+          }
+        ]
+      }
+    ]
+  },
+  "hint": "",
+  "answers": [
+    {
+      "label": "作成者の攻略例",
+      "events": [
+        {
+          "frame": 1,
+          "action": "right",
+          "type": "down"
+        },
+        {
+          "frame": 2,
+          "action": "right",
+          "type": "up"
+        },
+        {
+          "frame": 3,
+          "action": "right",
+          "type": "down"
+        },
+        {
+          "frame": 4,
+          "action": "right",
+          "type": "up"
+        },
+        {
+          "frame": 5,
+          "action": "hardDrop",
+          "type": "down"
+        },
+        {
+          "frame": 6,
+          "action": "hardDrop",
+          "type": "up"
+        },
+        {
+          "frame": 7,
+          "action": "softDrop",
+          "type": "down"
+        },
+        {
+          "frame": 8,
+          "action": "softDrop",
+          "type": "up"
+        },
+        {
+          "frame": 9,
+          "action": "softDrop",
+          "type": "down"
+        },
+        {
+          "frame": 10,
+          "action": "softDrop",
+          "type": "up"
+        },
+        {
+          "frame": 11,
+          "action": "softDrop",
+          "type": "down"
+        },
+        {
+          "frame": 12,
+          "action": "softDrop",
+          "type": "up"
+        },
+        {
+          "frame": 13,
+          "action": "softDrop",
+          "type": "down"
+        },
+        {
+          "frame": 14,
+          "action": "softDrop",
+          "type": "up"
+        },
+        {
+          "frame": 15,
+          "action": "softDrop",
+          "type": "down"
+        },
+        {
+          "frame": 16,
+          "action": "softDrop",
+          "type": "up"
+        },
+        {
+          "frame": 17,
+          "action": "softDrop",
+          "type": "down"
+        },
+        {
+          "frame": 18,
+          "action": "softDrop",
+          "type": "up"
+        },
+        {
+          "frame": 19,
+          "action": "softDrop",
+          "type": "down"
+        },
+        {
+          "frame": 20,
+          "action": "softDrop",
+          "type": "up"
+        },
+        {
+          "frame": 21,
+          "action": "softDrop",
+          "type": "down"
+        },
+        {
+          "frame": 22,
+          "action": "softDrop",
+          "type": "up"
+        },
+        {
+          "frame": 23,
+          "action": "softDrop",
+          "type": "down"
+        },
+        {
+          "frame": 24,
+          "action": "softDrop",
+          "type": "up"
+        },
+        {
+          "frame": 25,
+          "action": "softDrop",
+          "type": "down"
+        },
+        {
+          "frame": 26,
+          "action": "softDrop",
+          "type": "up"
+        },
+        {
+          "frame": 27,
+          "action": "softDrop",
+          "type": "down"
+        },
+        {
+          "frame": 28,
+          "action": "softDrop",
+          "type": "up"
+        },
+        {
+          "frame": 29,
+          "action": "softDrop",
+          "type": "down"
+        },
+        {
+          "frame": 30,
+          "action": "softDrop",
+          "type": "up"
+        },
+        {
+          "frame": 31,
+          "action": "softDrop",
+          "type": "down"
+        },
+        {
+          "frame": 32,
+          "action": "softDrop",
+          "type": "up"
+        },
+        {
+          "frame": 33,
+          "action": "softDrop",
+          "type": "down"
+        },
+        {
+          "frame": 34,
+          "action": "softDrop",
+          "type": "up"
+        },
+        {
+          "frame": 35,
+          "action": "softDrop",
+          "type": "down"
+        },
+        {
+          "frame": 36,
+          "action": "softDrop",
+          "type": "up"
+        },
+        {
+          "frame": 37,
+          "action": "softDrop",
+          "type": "down"
+        },
+        {
+          "frame": 38,
+          "action": "softDrop",
+          "type": "up"
+        },
+        {
+          "frame": 39,
+          "action": "right",
+          "type": "down"
+        },
+        {
+          "frame": 40,
+          "action": "right",
+          "type": "up"
+        },
+        {
+          "frame": 41,
+          "action": "right",
+          "type": "down"
+        },
+        {
+          "frame": 42,
+          "action": "right",
+          "type": "up"
+        },
+        {
+          "frame": 43,
+          "action": "right",
+          "type": "down"
+        },
+        {
+          "frame": 44,
+          "action": "right",
+          "type": "up"
+        },
+        {
+          "frame": 45,
+          "action": "ccw",
+          "type": "down"
+        },
+        {
+          "frame": 46,
+          "action": "ccw",
+          "type": "up"
+        },
+        {
+          "frame": 47,
+          "action": "right",
+          "type": "down"
+        },
+        {
+          "frame": 48,
+          "action": "right",
+          "type": "up"
+        },
+        {
+          "frame": 49,
+          "action": "softDrop",
+          "type": "down"
+        },
+        {
+          "frame": 50,
+          "action": "softDrop",
+          "type": "up"
+        },
+        {
+          "frame": 51,
+          "action": "cw",
+          "type": "down"
+        },
+        {
+          "frame": 52,
+          "action": "cw",
+          "type": "up"
+        },
+        {
+          "frame": 53,
+          "action": "hardDrop",
+          "type": "down"
+        },
+        {
+          "frame": 54,
+          "action": "hardDrop",
+          "type": "up"
+        },
+        {
+          "frame": 55,
+          "action": "softDrop",
+          "type": "down"
+        },
+        {
+          "frame": 56,
+          "action": "softDrop",
+          "type": "up"
+        },
+        {
+          "frame": 57,
+          "action": "softDrop",
+          "type": "down"
+        },
+        {
+          "frame": 58,
+          "action": "softDrop",
+          "type": "up"
+        },
+        {
+          "frame": 59,
+          "action": "softDrop",
+          "type": "down"
+        },
+        {
+          "frame": 60,
+          "action": "softDrop",
+          "type": "up"
+        },
+        {
+          "frame": 61,
+          "action": "softDrop",
+          "type": "down"
+        },
+        {
+          "frame": 62,
+          "action": "softDrop",
+          "type": "up"
+        },
+        {
+          "frame": 63,
+          "action": "softDrop",
+          "type": "down"
+        },
+        {
+          "frame": 64,
+          "action": "softDrop",
+          "type": "up"
+        },
+        {
+          "frame": 65,
+          "action": "softDrop",
+          "type": "down"
+        },
+        {
+          "frame": 66,
+          "action": "softDrop",
+          "type": "up"
+        },
+        {
+          "frame": 67,
+          "action": "softDrop",
+          "type": "down"
+        },
+        {
+          "frame": 68,
+          "action": "softDrop",
+          "type": "up"
+        },
+        {
+          "frame": 69,
+          "action": "softDrop",
+          "type": "down"
+        },
+        {
+          "frame": 70,
+          "action": "softDrop",
+          "type": "up"
+        },
+        {
+          "frame": 71,
+          "action": "softDrop",
+          "type": "down"
+        },
+        {
+          "frame": 72,
+          "action": "softDrop",
+          "type": "up"
+        },
+        {
+          "frame": 73,
+          "action": "softDrop",
+          "type": "down"
+        },
+        {
+          "frame": 74,
+          "action": "softDrop",
+          "type": "up"
+        },
+        {
+          "frame": 75,
+          "action": "softDrop",
+          "type": "down"
+        },
+        {
+          "frame": 76,
+          "action": "softDrop",
+          "type": "up"
+        },
+        {
+          "frame": 77,
+          "action": "softDrop",
+          "type": "down"
+        },
+        {
+          "frame": 78,
+          "action": "softDrop",
+          "type": "up"
+        },
+        {
+          "frame": 79,
+          "action": "softDrop",
+          "type": "down"
+        },
+        {
+          "frame": 80,
+          "action": "softDrop",
+          "type": "up"
+        },
+        {
+          "frame": 81,
+          "action": "softDrop",
+          "type": "down"
+        },
+        {
+          "frame": 82,
+          "action": "softDrop",
+          "type": "up"
+        },
+        {
+          "frame": 83,
+          "action": "softDrop",
+          "type": "down"
+        },
+        {
+          "frame": 84,
+          "action": "softDrop",
+          "type": "up"
+        },
+        {
+          "frame": 85,
+          "action": "softDrop",
+          "type": "down"
+        },
+        {
+          "frame": 86,
+          "action": "softDrop",
+          "type": "up"
+        },
+        {
+          "frame": 87,
+          "action": "softDrop",
+          "type": "down"
+        },
+        {
+          "frame": 88,
+          "action": "softDrop",
+          "type": "up"
+        },
+        {
+          "frame": 89,
+          "action": "cw",
+          "type": "down"
+        },
+        {
+          "frame": 90,
+          "action": "cw",
+          "type": "up"
+        },
+        {
+          "frame": 91,
+          "action": "softDrop",
+          "type": "down"
+        },
+        {
+          "frame": 92,
+          "action": "softDrop",
+          "type": "up"
+        },
+        {
+          "frame": 93,
+          "action": "softDrop",
+          "type": "down"
+        },
+        {
+          "frame": 94,
+          "action": "softDrop",
+          "type": "up"
+        },
+        {
+          "frame": 95,
+          "action": "cw",
+          "type": "down"
+        },
+        {
+          "frame": 96,
+          "action": "cw",
+          "type": "up"
+        },
+        {
+          "frame": 97,
+          "action": "hardDrop",
+          "type": "down"
+        },
+        {
+          "frame": 98,
+          "action": "hardDrop",
+          "type": "up"
+        }
+      ],
+      "settings": {
+        "das": 1000,
+        "arr": 1000,
+        "softDropFactor": 1000,
+        "gravity": 1000,
+        "lockDelay": 2000,
+        "lockResets": 15,
+        "keybinds": {
+          "left": "ArrowLeft",
+          "right": "ArrowRight",
+          "softDrop": "ArrowDown",
+          "hardDrop": "Space",
+          "cw": "ArrowUp",
+          "ccw": "KeyZ",
+          "rotate180": "KeyA",
+          "hold": "KeyC"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+name: Automatically adopt puzzle
+on:
+  issues:
+    types: [opened, edited]
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: puzzle-admission
+  cancel-in-progress: false
+jobs:
+  adopt:
+    if: github.event_name == 'workflow_dispatch' || startsWith(github.event.issue.title, '[Puzzle]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Replay and validate all adopted test fixtures
+        env:
+          ADMISSION_DRY_RUN: ${{ github.event_name == 'workflow_dispatch' }}
+        run: node site/validation/validator.mjs
+      - name: Save automatically adopted puzzle
+        if: github.event_name != 'workflow_dispatch'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- site/puzzles/published.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Automatically adopt replay-verified puzzle'
+            git pull --rebase origin main
+            git push origin main
+          fi
+      - uses: actions/configure-pages@v5
+        if: github.event_name != 'workflow_dispatch'
+      - uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'workflow_dispatch'
+        with:
+          path: site
+      - name: Deploy validated catalog
+        id: deployment
+        if: github.event_name != 'workflow_dispatch'
+        uses: actions/deploy-pages@v4
