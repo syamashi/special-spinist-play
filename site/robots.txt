@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://syamashi.github.io/special-spinist-play/sitemap.xml
